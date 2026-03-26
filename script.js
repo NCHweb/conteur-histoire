@@ -29,7 +29,7 @@ const situation = situations[Math.floor(Math.random() * situations.length)]
 
   document.getElementById('story-text').innerText = '✨ La magie est en train d\'opérer...'
 
-   const response = await fetch('/histoire', {
+   const response = await fetch('/.netlify/functions/histoire', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt: `Raconte une histoire très courte pour enfant de 0 à 4 ans.
